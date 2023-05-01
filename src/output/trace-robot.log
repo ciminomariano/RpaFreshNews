@@ -1,0 +1,81 @@
+ERROR:root:MAGAZINEwas not found: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type="checkbox" and @data-testid="DropdownLabelCheckbox" and @value="Magazine|nyt://section/a913d1fb-3cdf-556b-9a81-f0b996a1a202"]"}
+  (Session info: chrome=112.0.5615.138)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00D0DCE3+50899]
+	(No symbol) [0x00C9E111]
+	(No symbol) [0x00BA5588]
+	(No symbol) [0x00BD08F9]
+	(No symbol) [0x00BD0AFB]
+	(No symbol) [0x00BFF902]
+	(No symbol) [0x00BEB944]
+	(No symbol) [0x00BFE01C]
+	(No symbol) [0x00BEB6F6]
+	(No symbol) [0x00BC7708]
+	(No symbol) [0x00BC886D]
+	GetHandleVerifier [0x00F73EAE+2566302]
+	GetHandleVerifier [0x00FA92B1+2784417]
+	GetHandleVerifier [0x00FA327C+2759788]
+	GetHandleVerifier [0x00DA5740+672048]
+	(No symbol) [0x00CA8872]
+	(No symbol) [0x00CA41C8]
+	(No symbol) [0x00CA42AB]
+	(No symbol) [0x00C971B7]
+	BaseThreadInitThunk [0x76157D49+25]
+	RtlInitializeExceptionChain [0x77E2B74B+107]
+	RtlClearBits [0x77E2B6CF+191]
+
+ERROR:root:TECHNOLOGYwas not found: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="Technology|nyt://section/4224240f-b1ab-50bd-881f-782d6a3bc527"]"}
+  (Session info: chrome=112.0.5615.138)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00D0DCE3+50899]
+	(No symbol) [0x00C9E111]
+	(No symbol) [0x00BA5588]
+	(No symbol) [0x00BD08F9]
+	(No symbol) [0x00BD0AFB]
+	(No symbol) [0x00BFF902]
+	(No symbol) [0x00BEB944]
+	(No symbol) [0x00BFE01C]
+	(No symbol) [0x00BEB6F6]
+	(No symbol) [0x00BC7708]
+	(No symbol) [0x00BC886D]
+	GetHandleVerifier [0x00F73EAE+2566302]
+	GetHandleVerifier [0x00FA92B1+2784417]
+	GetHandleVerifier [0x00FA327C+2759788]
+	GetHandleVerifier [0x00DA5740+672048]
+	(No symbol) [0x00CA8872]
+	(No symbol) [0x00CA41C8]
+	(No symbol) [0x00CA42AB]
+	(No symbol) [0x00C971B7]
+	BaseThreadInitThunk [0x76157D49+25]
+	RtlInitializeExceptionChain [0x77E2B74B+107]
+	RtlClearBits [0x77E2B6CF+191]
+
+ERROR:root:WORLDwas not found: Message: invalid argument: 'value' must be a string
+  (Session info: chrome=112.0.5615.138)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00D0DCE3+50899]
+	(No symbol) [0x00C9E111]
+	(No symbol) [0x00BA5588]
+	(No symbol) [0x00BD09EC]
+	(No symbol) [0x00BD0AFB]
+	(No symbol) [0x00BFF902]
+	(No symbol) [0x00BEB944]
+	(No symbol) [0x00BFE01C]
+	(No symbol) [0x00BEB6F6]
+	(No symbol) [0x00BC7708]
+	(No symbol) [0x00BC886D]
+	GetHandleVerifier [0x00F73EAE+2566302]
+	GetHandleVerifier [0x00FA92B1+2784417]
+	GetHandleVerifier [0x00FA327C+2759788]
+	GetHandleVerifier [0x00DA5740+672048]
+	(No symbol) [0x00CA8872]
+	(No symbol) [0x00CA41C8]
+	(No symbol) [0x00CA42AB]
+	(No symbol) [0x00C971B7]
+	BaseThreadInitThunk [0x76157D49+25]
+	RtlInitializeExceptionChain [0x77E2B74B+107]
+	RtlClearBits [0x77E2B6CF+191]
+

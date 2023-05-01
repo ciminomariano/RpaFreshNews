@@ -1,6 +1,11 @@
+import logging
+
+
 class CustomException(Exception):
     pass
 
+def log_section_not_found(category,e):
+    return logging.error(category + "was not found: %s", str(e))
 
 def handle_custom_exceptions(func):
     def wrapper(*args, **kwargs):
