@@ -7,9 +7,9 @@ import os
 import logging
 
 # Creating folder for logs ig does not exists
-if not os.path.exists("output"):
-    os.makedirs("output")
-logging.basicConfig(filename='output/trace-robot.log', level=logging.ERROR)
+if not os.path.exists("output/logs"):
+    os.makedirs("output/logs")
+logging.basicConfig(filename='output/logs/trace-robot.log', level=logging.ERROR)
 # Taking initial configuration from config file
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -28,24 +28,30 @@ num_months = config.get('search', 'NUMBER_OF_MONTHS')
 def main():
     # Create an instance of my custom actions class
     custom_actions = CustomActions(URLNYTIMES)
+    try:
     # Execute the function to open the web site
-    # open_website = custom_actions.open_website(constants_names.URLNYTIMES)
-
-    custom_actions.apply_datetime(num_months)
-
-    if custom_actions.open_website(constants_names.URLNYTIMES):
-        if custom_actions.maximaze_nav():
-            if custom_actions.accept_cookies():
-                if custom_actions.click_search_bar():
-                    if custom_actions.write_search_term(search_phrase):
-                        custom_actions.apply_datetime(num_months)
-                        custom_actions.apply_categories(news_categories)
-                        articles = custom_actions.extract_articles(search_phrase)
-                        custom_actions.write_to_excel(articles)
-                        print(articles)
-
-
-
+        if custom_actions.open_website(constants_names.URLNYTIMES):
+            # Maximize the browser
+            if custom_actions.maximaze_nav():
+                # Accept the cookies
+                if custom_actions.accept_cookies():
+                    # Click on search bar
+                    if custom_actions.click_search_bar():
+                        # Enter the search phrase imported from config file
+                        if custom_actions.write_search_term(search_phrase):
+                            # Apply the date filters also imported from config file
+                            custom_actions.apply_datetime(num_months)
+                            # Apply the filter categories from the list in config file
+                            # (categories MUST BE separated by coma
+                            # example Books,Business,Movies,New York,Opinion )
+                            custom_actions.apply_categories(news_categories)
+                            # Call to the function where we extract the info
+                            #of the articles
+                            articles = custom_actions.extract_articles(search_phrase)
+                            #Save the excel file with the info of the web site
+                            custom_actions.write_to_excel(articles)
+    except Exception as e:
+        logging.error(f"An exception occurred: {e}")
 
 if __name__ == "__main__":
     main()

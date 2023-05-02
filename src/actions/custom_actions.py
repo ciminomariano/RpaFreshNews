@@ -325,7 +325,8 @@ class CustomActions:
 
     def write_to_excel(self,data):
         # Create a new workbook and add a worksheet
-        workbook = xlsxwriter.Workbook('articles.xlsx')
+        os.makedirs('output/excel/', exist_ok=True)
+        workbook = xlsxwriter.Workbook('output/excel/articles.xlsx')
         worksheet = workbook.add_worksheet()
 
         # Write the header row
